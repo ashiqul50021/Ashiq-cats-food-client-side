@@ -34,13 +34,38 @@ const Purchases = () => {
     }
     return (
         <div>
+            <div className="text-center">
             <h2>MY ORDERS</h2>
             <p>purchase item {purchases.length}</p>
+            </div>
             {
                 purchases.map(purchases => <div>
-                    <h3>{purchases.name}</h3>
+                    <table className="table">
+                    <thead>
+                        <tr>
+                            <th>Img</th>
+                            
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>number</th>
+                            <th>Activaty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src={purchases.img} alt="" /></td>
+                           
+                            <td>{purchases.name}</td>
+                            <td>{purchases.email}</td>
+                            <td>{purchases.number}</td>
+                            <td><button onClick={() => handleDelete(purchases.email)} className="btn btn-danger">delete</button></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                    {/* <h3>{purchases.name}</h3>
                     <img src={purchases.img} alt="" />
-                    <button onClick={() => handleDelete(purchases.email)} className="btn btn-danger">delete</button>
+                     */}
     
                 </div>)
                 }

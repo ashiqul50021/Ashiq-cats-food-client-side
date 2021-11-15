@@ -19,6 +19,7 @@ import AddProducts from './components/AdminPanel/AddProducts/AddProducts';
 import PurchasePage from './components/UserPanel/PurchasePage/PurchasePage';
 import Dashboard from './components/DashBoard/Dashboard/Dashboard';
 import MakeAdmin from './components/DashBoard/MakeAdmin/MakeAdmin';
+import  NotFound  from './components/NotFound/NotFound';
 
 
 function App() {
@@ -55,6 +56,9 @@ function App() {
           <Route exact path="/makeAdmin">
             <MakeAdmin/>
           </Route>
+          <Route path="*">
+              <NotFound></NotFound>
+            </Route>
         </Switch>
       <Footer/>
     </Router>

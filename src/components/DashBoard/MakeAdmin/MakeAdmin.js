@@ -29,11 +29,11 @@ const MakeAdmin = () => {
     }
     return (
         <div>
-            <h2>hi i am make adming</h2>
+            <h2 className="text-center">Make A Admin</h2>
             <form onSubmit={handleAdminSubmit}>
-                <label htmlFor="email">Email:</label>
-                <input onBlur={handleOnblur} type="email" />
-                <button type="submit">Make Admin</button>
+                <label className="form-label" htmlFor="email">Email:</label>
+                <input className="form-control" onBlur={handleOnblur} type="email" />
+                <button className="btn btn-secondary mt-4" type="submit">Make Admin</button>
 
             </form>
             {success &&

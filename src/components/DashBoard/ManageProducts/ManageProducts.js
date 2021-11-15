@@ -29,12 +29,33 @@ const ManageProducts = () => {
     }
     return (
         <div>
-            <h2>manage Product </h2>
+            <h2 className="text-center">Manage All Product </h2>
             {
                 Allproducts.map(allproduct => <div key={allproduct._id}>
-                    <h3>{allproduct.name}</h3>
+                    <table className="table">
+                    <thead>
+                        <tr>
+                            <th>Img</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            
+                            <th>Activaty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src={allproduct.img} alt="" /></td>
+                            <td>{allproduct.name}</td>
+                            <td>{allproduct.description}</td>
+                         
+                            <td><button onClick={() => handleDelete(allproduct._id)} className="btn btn-danger">delete</button></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                    {/* <h3>{allproduct.name}</h3>
                     <img src={allproduct.img} alt="" />
-                    <button onClick={() => handleDelete(allproduct._id)} className="btn btn-danger">delete</button>
+                    <button onClick={() => handleDelete(allproduct._id)} className="btn btn-danger">delete</button> */}
 
                 </div>)
             }

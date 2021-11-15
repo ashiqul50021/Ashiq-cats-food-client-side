@@ -29,13 +29,34 @@ const Manageallorders = () => {
 
     }
     return (
-        <div>
-        <h2>manage Product </h2>
+        <div className="container">
+        <h2 className="text-center">Manage All Order </h2>
         {
             manageallorders.map(manageallorder => <div key={manageallorder._id}>
-                <h3>{manageallorder.name}</h3>
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th>Img</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>number</th>
+                            <th>Activaty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src={manageallorder.img} alt="" /></td>
+                            <td>{manageallorder.name}</td>
+                            <td>{manageallorder.email}</td>
+                            <td>{manageallorder.number}</td>
+                            <td><button onClick={() => handleDelete(manageallorder._id)} className="btn btn-danger">delete</button></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                {/* <h3>{manageallorder.name}</h3>
                 <img src={manageallorder.img} alt="" />
-                <button onClick={() => handleDelete(manageallorder._id)} className="btn btn-danger">delete</button>
+                <button onClick={() => handleDelete(manageallorder._id)} className="btn btn-danger">delete</button> */}
 
             </div>)
         }
