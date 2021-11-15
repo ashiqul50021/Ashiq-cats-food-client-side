@@ -1,0 +1,13 @@
+nav{
+    background-color: #333333;
+    border: none;
+}
+img{
+    height: 58px;
+}
+.nav-link{
+    color: white !important;
+}
+.nav-link:hover{
+    color: #428345 !important;
+}
